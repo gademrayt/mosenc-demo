@@ -1,0 +1,25 @@
+# Browser exports are private, not code.
+mosenc-progress*.json
+progress*.json
+exports/
+private/
+_private/
+local/
+qa/
+__pycache__/
+*.pyc
+.venv/
+node_modules/
+.env
+.env.*
+wp-config.php
+*.sql
+*.sql.*
+backups/
+*.zip
+*.tar
+*.gz
+credentials*
+auth.json
+.DS_Store
+Thumbs.db
