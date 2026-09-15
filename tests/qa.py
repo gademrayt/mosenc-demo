@@ -13,7 +13,7 @@ with sync_playwright() as p:
     errors=[];network=[]
     page.on('pageerror',lambda e:errors.append(str(e)))
     page.on('request',lambda r:network.append(r.url) if r.url.startswith(('http:','https:')) else None)
-    page.goto((ROOT/'index.html').as_uri())
+    page.goto((ROOT/'plan.html').as_uri())
     assert page.locator('.task').count()==34
     assert page.locator('#count').inner_text()=='0 / 30'
     assert page.evaluate("Array.from(document.querySelectorAll('a[href^=\"#\"]')).every(a=>document.getElementById(a.hash.slice(1)))")
@@ -71,7 +71,7 @@ with sync_playwright() as p:
     report.append('browser JS errors: 0; external network requests: 0')
     # Browser-state corruption is preserved until explicit reset/import.
     corrupt=browser.new_page()
-    corrupt.goto((ROOT/'index.html').as_uri())
+    corrupt.goto((ROOT/'plan.html').as_uri())
     corrupt.evaluate(f'localStorage.setItem({json.dumps(KEY)},"not-json")')
     corrupt.reload()
     assert corrupt.locator('#raw-backup').is_visible()
@@ -81,7 +81,7 @@ with sync_playwright() as p:
     # Storage denied leaves app usable with explicit export warning.
     blocked=browser.new_page()
     blocked.add_init_script("Storage.prototype.setItem=function(){throw new DOMException('denied','SecurityError')};")
-    blocked.goto((ROOT/'index.html').as_uri())
+    blocked.goto((ROOT/'plan.html').as_uri())
     blocked.locator('#check-M01').check()
     assert 'не сохранил' in blocked.locator('#status').inner_text()
     with blocked.expect_download():blocked.locator('#export').click()

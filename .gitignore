@@ -23,3 +23,10 @@ credentials*
 auth.json
 .DS_Store
 Thumbs.db
+
+# Local backups and external reference folders
+RigaKafa_BACKUP_ORIGINAL_*/
+WordPress-Mastery/
+RigaKafa/
+RigaKafa-KafijasDraugs/
+Mosenc/

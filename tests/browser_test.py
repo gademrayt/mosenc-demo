@@ -4,13 +4,13 @@ ROOT=Path(__file__).resolve().parents[1]
 
 class BrowserTests(unittest.TestCase):
     def test_checkbox_and_note_survive_reload(self):
-        self.assertTrue((ROOT/'index.html').exists(), 'HTML plan not implemented')
+        self.assertTrue((ROOT/'plan.html').exists(), 'HTML plan not implemented')
         from playwright.sync_api import sync_playwright
         with sync_playwright() as p:
             candidates=list((Path.home()/'.cache/ms-playwright').glob('chromium-*/chrome-linux*/chrome'))
             browser=p.chromium.launch(headless=True,executable_path=str(candidates[-1]) if candidates else None)
             page=browser.new_page()
-            page.goto((ROOT/'index.html').as_uri())
+            page.goto((ROOT/'plan.html').as_uri())
             page.locator('#check-M01').check()
             page.locator('#note-M01').fill('Готово. Проверка на телефоне.')
             page.reload()
@@ -26,7 +26,7 @@ class BrowserTests(unittest.TestCase):
             browser=p.chromium.launch(headless=True,executable_path=str(exe))
             page=browser.new_page(accept_downloads=True)
             page.set_default_timeout(4000)
-            page.goto((ROOT/'index.html').as_uri())
+            page.goto((ROOT/'plan.html').as_uri())
             page.locator('#check-M01').check()
             note='<img src=x onerror="window.injected=true"> Моя заметка'
             page.locator('#note-M01').fill(note)
