@@ -2,54 +2,90 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Mosenc — Логотипы и Иконка (Золотое зерно)</title>
+  <title>Mosenc — Варианты логотипа и цвета для шапки</title>
   <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f3f3f0; color: #222; margin: 0; padding: 30px; }
-    h1 { margin-bottom: 8px; }
-    p.sub { color: #666; margin-bottom: 24px; font-size: 15px; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
-    .card { background: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
-    .card h3 { margin: 0 0 8px 0; font-size: 16px; }
-    .card p { margin: 0 0 14px 0; font-size: 13px; color: #666; }
-    .preview-box { height: 160px; display: flex; align-items: center; justify-content: center; border-radius: 8px; border: 1px dashed #ccc; overflow: hidden; margin-top: 8px; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f4f5f7; color: #1f2933; margin: 0; padding: 30px; line-height: 1.5; }
+    h1 { margin-bottom: 8px; font-size: 24px; }
+    p.sub { color: #52606d; margin-bottom: 24px; font-size: 15px; }
+    .callout { background: #e6f6f4; border-left: 4px solid #12807a; padding: 14px 18px; border-radius: 6px; margin-bottom: 28px; font-size: 14px; color: #0a4f4b; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-bottom: 36px; }
+    .card { background: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 4px 14px rgba(0,0,0,0.06); border: 1px solid #e4e7eb; position: relative; }
+    .card.featured { border: 2px solid #12807a; }
+    .card h3 { margin: 0 0 6px 0; font-size: 16px; display: flex; align-items: center; gap: 8px; }
+    .color-dot { width: 14px; height: 14px; border-radius: 50%; display: inline-block; flex-shrink: 0; }
+    .card p { margin: 0 0 14px 0; font-size: 13px; color: #616e7c; min-height: 48px; }
+    .preview-box { height: 130px; display: flex; align-items: center; justify-content: center; border-radius: 8px; border: 1px solid #e1e4e8; overflow: hidden; margin-top: 8px; }
     .bg-light { background: #ffffff; }
-    .bg-dark { background: #1a1a1a; }
-    img { max-height: 120px; max-width: 90%; object-fit: contain; }
-    .filename { font-family: monospace; background: #eee; padding: 2px 6px; border-radius: 4px; font-size: 12px; }
+    img { max-height: 90px; max-width: 80%; object-fit: contain; }
+    .filename { font-family: monospace; background: #f0f2f5; padding: 2px 6px; border-radius: 4px; font-size: 12px; color: #0b69a3; }
+    .badge-teal { background: #12807a; color: #fff; font-size: 11px; padding: 3px 8px; border-radius: 10px; text-transform: uppercase; font-weight: bold; margin-left: auto; }
+    .badge-gray { background: #52606d; color: #fff; font-size: 11px; padding: 3px 8px; border-radius: 10px; text-transform: uppercase; font-weight: bold; margin-left: auto; }
+
+    /* Live Header Mock */
+    .mock-section { background: #fff; border-radius: 12px; padding: 24px; box-shadow: 0 4px 14px rgba(0,0,0,0.06); border: 1px solid #e4e7eb; }
+    .mock-header { border: 1px solid #e1e4e8; border-radius: 8px; overflow: hidden; margin-top: 14px; }
+    .mock-topbar { background: #12807a; color: #fff; padding: 8px 24px; font-size: 12px; display: flex; justify-content: space-between; align-items: center; }
+    .mock-nav-row { background: #ffffff; display: flex; align-items: center; justify-content: center; padding: 18px 20px; gap: 28px; border-bottom: 1px solid #fcdacf; }
+    .mock-menu { display: flex; gap: 24px; font-size: 14px; font-weight: 600; color: #12807a; letter-spacing: 0.5px; }
+    .mock-logo { height: 50px; display: flex; align-items: center; justify-content: center; }
+    .mock-logo img { height: 50px; }
   </style>
 </head>
 <body>
-  <h1>Mosenc — Комплект логотипов для Kadence</h1>
-  <p class="sub">Все файлы подготовлены на прозрачном фоне. Готовы для загрузки в WordPress (Кастомайзер темы Kadence).</p>
+  <h1>Mosenc — Согласование логотипа и палитры Kadence</h1>
+  <p class="sub">В Kadence Starter Template «Coffee Shop» цвет <strong>Palette 2 (#12807A)</strong> является основным для верхней полосы, пунктов меню и логотипа.</p>
+
+  <div class="callout">
+    <strong>Фактическая палитра шаблона:</strong> Верхняя полоса (Top Bar) — <code>#12807A</code>, пункты меню (Navigation Menu) — <code>#12807A</code>. Изумрудное зерно Mosenc в цвете <code>#12807A</code> на 100% совпадает с палитрой сайта!
+  </div>
 
   <div class="grid">
-    <div class="card">
-      <h3>1. Золотое зерно 512×512 (Иконка сайта / Favicon)</h3>
-      <p>Файл: <span class="filename">mosenc-site-icon-bean-gold-512x512.png</span></p>
-      <div class="preview-box bg-dark"><img src="mosenc-site-icon-bean-gold-512x512.png" alt="Золотое зерно"></div>
-      <div class="preview-box bg-light"><img src="mosenc-site-icon-bean-gold-512x512.png" alt="Золотое зерно"></div>
+    <div class="card featured">
+      <h3><span class="color-dot" style="background:#12807a"></span> 1. Тил — Оригинал <span class="badge-teal">Установлен</span></h3>
+      <p>Изящный чистый контур зерна в точнейшем цвете <code>Palette 2 (#12807A)</code>.<br>Файл: <span class="filename">mosenc-bean-teal-crop.png</span></p>
+      <div class="preview-box bg-light"><img src="mosenc-bean-teal-crop.png" alt="Оригинальный тил"></div>
     </div>
+
     <div class="card">
-      <h3>2. Золотое зерно (Обрезанное по контуру)</h3>
-      <p>Файл: <span class="filename">mosenc-gold-bean-crop.png</span></p>
-      <div class="preview-box bg-dark"><img src="mosenc-gold-bean-crop.png" alt="Обрезанное зерно"></div>
-      <div class="preview-box bg-light"><img src="mosenc-gold-bean-crop.png" alt="Обрезанное зерно"></div>
+      <h3><span class="color-dot" style="background:#12807a"></span> 2. Тил — Утолщённый <span class="badge-teal">Под массу чашки</span></h3>
+      <p>Тот же цвет <code>#12807A</code>, но линии утолщены, чтобы дать такую же оптическую плотность, как у чашки.<br>Файл: <span class="filename">mosenc-bean-teal-bold.png</span></p>
+      <div class="preview-box bg-light"><img src="mosenc-bean-teal-bold.png" alt="Утолщённый тил"></div>
     </div>
+
     <div class="card">
-      <h3>3. Логотип Mosenc (Золотой)</h3>
-      <p>Файл: <span class="filename">mosenc-logo-gold.png</span></p>
-      <div class="preview-box bg-dark"><img src="mosenc-logo-gold.png" alt="Золотой логотип"></div>
-      <div class="preview-box bg-light"><img src="mosenc-logo-gold.png" alt="Золотой логотип"></div>
+      <h3><span class="color-dot" style="background:#12807a"></span> 3. Оригинальная чашка <span class="badge-gray">Эталон шаблона</span></h3>
+      <p>Массивный контур шаблона (для сравнения оптической плотности).<br>Файл: <span class="filename">cup.png</span></p>
+      <div class="preview-box bg-light"><img src="cup.png" alt="Чашка"></div>
     </div>
+
     <div class="card">
-      <h3>4. Логотип Mosenc (Графитовый / Charcoal)</h3>
-      <p>Файл: <span class="filename">mosenc-logo-charcoal.png</span></p>
-      <div class="preview-box bg-light"><img src="mosenc-logo-charcoal.png" alt="Графитовый логотип"></div>
+      <h3><span class="color-dot" style="background:#1f2933"></span> 4. Графит / Эспрессо</h3>
+      <p>Максимальный контраст и строгость, солидный образ обжарки (#1F2933).<br>Файл: <span class="filename">mosenc-bean-espresso-crop.png</span></p>
+      <div class="preview-box bg-light"><img src="mosenc-bean-espresso-crop.png" alt="Графит / эспрессо"></div>
     </div>
-    <div class="card">
-      <h3>5. Логотип Mosenc (Белый)</h3>
-      <p>Файл: <span class="filename">mosenc-logo-white.png</span></p>
-      <div class="preview-box bg-dark"><img src="mosenc-logo-white.png" alt="Белый логотип"></div>
+  </div>
+
+  <div class="mock-section">
+    <h3>Как выглядит шапка сайта с тиловым зерном (#12807A):</h3>
+    <div class="mock-header">
+      <div class="mock-topbar">
+        <span>Facebook &nbsp;|&nbsp; X &nbsp;|&nbsp; Instagram</span>
+        <span>Grozs (0)</span>
+      </div>
+      <div class="mock-nav-row">
+        <div class="mock-menu">
+          <span>Kafija</span>
+          <span>Kafijas automāti un serviss</span>
+        </div>
+        <div class="mock-logo">
+          <img src="mosenc-bean-teal-crop.png" alt="Mosenc Bean">
+        </div>
+        <div class="mock-menu">
+          <span>Pakalpojumi</span>
+          <span>Par grauzdētavu</span>
+          <span>Kontakti</span>
+        </div>
+      </div>
     </div>
   </div>
 </body>
